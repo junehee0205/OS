@@ -1,0 +1,66 @@
+# 이 viminfo 파일은 빔이 만든 것입니다 Vim 8.1.
+# 조심만 한다면 고칠 수도 있습니다!
+
+# Viminfo version
+|1,4
+
+# 이 파일이 저장되었을 때의 'encoding'의 값
+*encoding=utf-8
+
+
+# hlsearch on (H) or off (h):
+~h
+# 명령 행 히스토리 (새것부터 오래된 것 순):
+:exit
+|2,0,1617175954,,"exit"
+
+# 찾을 문자열 히스토리 (새것부터 오래된 것 순):
+
+# 표현 히스토리 (새것부터 오래된 것 순):
+
+# 입력 행 히스토리 (새것부터 오래된 것 순):
+
+# 디버그 행 히스토리 (새것부터 오래된 것 순):
+
+# 레지스터:
+""1	LINE	0
+	#include <stdio.h>
+	
+	int main(int argc , char argv
+	{
+		int i = 0;
+	
+		printf("%d arguments \n", argc);
+		for(i = 0; i <= argc; i++){
+			printf("argv[%d] = %s\n",i ,argv[i]);
+		}
+		
+		return 0;
+	}
+|3,1,1,1,13,0,1617175949,"#include <stdio.h>","","int main(int argc , char argv","{","	int i = 0;","","	printf(\"%d arguments \\n\", argc);","	for(i = 0; i <= argc; i++){","		printf(\"argv[%d] = %s\\n\",i ,argv[i]);","	}","	","	return 0;","}"
+
+# 파일 마크:
+'0  1  0  ~/hw3_1.c
+|4,48,1,0,1617199224,"~/hw3_1.c"
+
+# 점프목록 (새것이 먼저):
+-'  1  0  ~/hw3_1.c
+|4,39,1,0,1617199224,"~/hw3_1.c"
+
+# 파일내의 마크 히스토리 (새것부터 오래된 순):
+
+> ~/hw3_1.c
+	*	1617199224	0
+	"	1	0
+	^	1	0
+	.	1	0
+	+	1	0
+	+	1	7
+	+	1	0
+	+	1	32
+	+	1	5
+	+	1	0
+	+	1	27
+	+	1	8
+	+	1	38
+	+	1	0
