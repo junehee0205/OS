@@ -1,9 +1,10 @@
 #include<stdio.h>
 #include<limits.h>
+#include<string.h>
+#define MAX 1024 
+
  
-// Matrix Ai has dimension p[i-1] x p[i] for i = 1..n
- 
-int MatrixChainMultiplication(int p[], int n)
+int calculate(int p[], int n)
 {
     int m[n][n];
     int i, j, k, L, q;
@@ -36,13 +37,22 @@ int MatrixChainMultiplication(int p[], int n)
  
 int main()
 {
-    int n,i;
-    printf("Enter number of matrices\n");
-    scanf("%d",&n);
+//    int n,i;
+ //   printf("Enter number of matrices\n");
+ // scanf("%d",&n);
  
-    n++;
- 
-    int arr[n];
+ //   n++;
+	FILE *fp = fopen("MCMproblem.txt", "r");
+	int i = 0; 
+	while(!feof(fp)){
+		int num[MAX];
+		while((num[i]) = );
+		fscanf(fp, "%d", &num[i]);
+		int arrsize  = sizeof(num)/sizeof(num[0]);
+		printf("Calculation%d Result:%d\n", i+1, calculate(num, arrsize));
+		i++;
+	}
+    /*int arr[n];dd
  
     printf("Enter dimensions \n");
  
@@ -54,7 +64,7 @@ int main()
  
     int size = sizeof(arr)/sizeof(arr[0]);
  
-    printf("Minimum number of multiplications is %d ", MatrixChainMultiplication(arr, size));
- 
+    printf("Minimum number of multiplications is %d ", calculate(arr, size));
+ */
     return 0;
 }
