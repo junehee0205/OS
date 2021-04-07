@@ -82,37 +82,23 @@ int main(int argc, char *argv[])
 			ParseCommand(command, &newargc , newargv);
 			if(strstr(newargv[0], "cd") != NULL){
 				chdir(newargv[1]);
-			}	
-			pid_t pid = fork();
-			if(pid>0){
-			execvp("_FILE_", argv[1]);
-			wait(0);
-			}
-			else if(pid==0){
-				
-				/*if(strstr(newargv[0], "mkdir") != NULL){
-					mkdir(newargv[1], 0755);
-				}
-		
-				else if(strstr(newargv[0], "rmdir") != NULL){
-					rmdir(newargv[1]);
-				}
-			
-				else if(strstr(newargv[0], "pwd") != NULL){
-					printf("Current  Directory: %s\n", getcwd(path, MAX_ARG));
-				}
-
-				else if(strstr(newargv[0], "ls") != NULL){
-					system(command);
-					}*/
-				
-				system(com);
 				printf("\n");
-				return 0;
 			}	
-	}
+			else if(strcmp(&command[0], "#") == 0) printf("\n");
+			else{
+				pid_t pid = fork();
+				if(pid>0){
+				execvp("_FILE_", argv[1]);
+				wait(0);
+				}
+				else if(pid==0){
+					system(com);
+					printf("\n");
+					return 0;
+				}	
+			}
+		}
 	close(fd);
-	printf("Bye!\n");
 	return 0;
 }
 

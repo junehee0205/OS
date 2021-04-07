@@ -48,7 +48,7 @@ void nocommandline()
 
 void fileinfo(char *filename)
 {
-	printf("Permission of file a.out\n");
+	printf("Permission of file %s\n", filename);
 	printf("\tpermission to read: %d\n", access( filename, R_OK ) == 0 );
 	printf("\tpermission to write: %d\n", access( filename, W_OK ) == 0 );
 	printf("\tpermission to execute: %d\n", access( filename, X_OK ) == 0 );

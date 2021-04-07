@@ -9,6 +9,10 @@ char *ctime( const time_t *timer);
 
 int main(int argc , char *argv[])
 {		
+	if(argc < 2){
+		printf("error!\n");
+		return 0;	
+	}
 	time_t ntime;
 	struct tm *ct;
 	time(&ntime);
