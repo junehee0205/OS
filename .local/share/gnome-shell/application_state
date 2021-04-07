@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
 <application-state>
   <context id="">
-    <application id="org.gnome.Nautilus.desktop" score="3" last-seen="1616740151"/>
-    <application id="org.gnome.Terminal.desktop" score="3988" last-seen="1617175780"/>
+    <application id="gnome-control-center.desktop" score="37" last-seen="1617531954"/>
+    <application id="org.gnome.Terminal.desktop" score="7203" last-seen="1617761297"/>
+    <application id="yelp.desktop" score="0" last-seen="1617532804"/>
   </context>
 </application-state>
