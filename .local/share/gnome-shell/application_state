@@ -3,8 +3,8 @@
   <context id="">
     <application id="org.gnome.Nautilus.desktop" score="30" last-seen="1617782200"/>
     <application id="gnome-control-center.desktop" score="37" last-seen="1617531954"/>
-    <application id="org.gnome.Terminal.desktop" score="9354" last-seen="1617783030"/>
+    <application id="org.gnome.Terminal.desktop" score="9610" last-seen="1617784824"/>
     <application id="yelp.desktop" score="0" last-seen="1617532804"/>
-    <application id="update-manager.desktop" score="0" last-seen="1617783054"/>
+    <application id="update-manager.desktop" score="0" last-seen="1617784830"/>
   </context>
 </application-state>

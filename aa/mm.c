@@ -1,70 +1,79 @@
 #include<stdio.h>
 #include<limits.h>
 #include<string.h>
+#include<stdlib.h>
 #define MAX 1024 
 
- 
-int calculate(int p[], int n)
+int s[MAX][MAX]; 
+
+void ParseCommand(char *command, int *argc , char *argv[]){
+
+	*argc = 0;
+	int i=0;
+	char *ptr = strtok(command, " ");	
+	while(ptr != NULL){
+		argv[i] = ptr;
+		ptr = strtok(NULL, " ");
+		i++;
+		*argc+=1;
+	}
+}
+
+int calculate(int arr[], int size)
 {
-    int m[n][n];
-    int i, j, k, L, q;
- 
-    for (i=1; i<n; i++)
+	int m[size][size];
+	int i, j, k, r, q;
+	 
+    for (i=1; i<size; i++)
         m[i][i] = 0;    //number of multiplications are 0(zero) when there is only one matrix
  
     //Here L is chain length. It varies from length 2 to length n.
-    for (L=2; L<n; L++)
+    for (r=2; r<size; r++)
     {
-        for (i=1; i<n-L+1; i++)
+        for (i=1; i<size-r+1; i++)
         {
-            j = i+L-1;
+            j = i+r-1;
             m[i][j] = INT_MAX;  //assigning to maximum value
  
-            for (k=i; k<=j-1; k++)
+            for (k=i; k<j; k++)
             {
-                q = m[i][k] + m[k+1][j] + p[i-1]*p[k]*p[j];
+                q = m[i][k] + m[k+1][j] + arr[i-1]*arr[k]*arr[j];
                 if (q < m[i][j])
                 {
-                    m[i][j] = q;    //if number of multiplications found less that number will be updated.
+			m[i][j] = q;    //if number of multiplications found less that number will be updated.
+			s[i][j] = k;
                 }
             }
         }
     }
  
-    return m[1][n-1];   //returning the final answer which is M[1][n]
+    return  m[1][size-1];   //returning the final answer which is M[1][n]
  
 }
  
 int main()
 {
-//    int n,i;
- //   printf("Enter number of matrices\n");
- // scanf("%d",&n);
- 
- //   n++;
-	FILE *fp = fopen("MCMproblem.txt", "r");
-	int i = 0; 
-	while(!feof(fp)){
+	FILE *fp = fopen("MCMproblem.txt", "r");	
+	char str[MAX];
+	int pnum = 1;
+
+	while(fgets(str, MAX, fp) != NULL){
 		int num[MAX];
-		while((num[i]) = );
-		fscanf(fp, "%d", &num[i]);
-		int arrsize  = sizeof(num)/sizeof(num[0]);
-		printf("Calculation%d Result:%d\n", i+1, calculate(num, arrsize));
-		i++;
+		int count = 0;
+		char *strnum[MAX] = {NULL};
+		
+		ParseCommand(str, &count, strnum);
+		
+		printf("Problem %d: ", pnum);
+		
+		for(int j=0; j<count; j++){
+			num[j] = atoi(strnum[j]);
+			printf("%d ", num[j]);
+		}
+		
+		printf("\nThe Minimum Result:%d, k = %d\n\n",  calculate(num,count), s[1][count]);
+		pnum++;
 	}
-    /*int arr[n];dd
- 
-    printf("Enter dimensions \n");
- 
-    for(i=0;i<n;i++)
-    {
-        printf("Enter d%d :: ",i);
-        scanf("%d",&arr[i]);
-    }
- 
-    int size = sizeof(arr)/sizeof(arr[0]);
- 
-    printf("Minimum number of multiplications is %d ", calculate(arr, size));
- */
     return 0;
 }
+
