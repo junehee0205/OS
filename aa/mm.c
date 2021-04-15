@@ -71,7 +71,7 @@ int main()
 			printf("%d ", num[j]);
 		}
 		
-		printf("\nThe Minimum Result:%d, k = %d\n\n",  calculate(num,count), s[1][count]);
+		printf("\nk = %d\nThe Minimum Result:%d\n\n", s[1][count], calculate(num,count));
 		pnum++;
 	}
     return 0;

@@ -73,7 +73,7 @@
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="file:///" added="2021-04-07T08:52:49Z" modified="2021-04-07T08:52:49Z" visited="1969-12-31T23:59:59Z">
+  <bookmark href="file:///" added="2021-04-07T08:52:49Z" modified="2021-04-13T13:30:35Z" visited="1969-12-31T23:59:59Z">
     <info>
       <metadata owner="http://freedesktop.org">
         <mime:mime-type type="inode/directory"/>
@@ -81,7 +81,7 @@
           <bookmark:group>baobab</bookmark:group>
         </bookmark:groups>
         <bookmark:applications>
-          <bookmark:application name="baobab" exec="&apos;baobab %u&apos;" modified="2021-04-07T08:52:49Z" count="1"/>
+          <bookmark:application name="baobab" exec="&apos;baobab %u&apos;" modified="2021-04-13T13:30:35Z" count="3"/>
         </bookmark:applications>
       </metadata>
     </info>

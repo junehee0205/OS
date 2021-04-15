@@ -57,7 +57,7 @@ int calculate(int arr[], int size)
 
         }
     }
-	printf("\nMinimum parenthesization:");
+	printf("\nOptimal Parenthesization:");
  		parens(i-1,j);
 	printf("\n");
     return  m[1][size-1];   //returning the final answer which is M[1][n]
@@ -84,7 +84,7 @@ int main()
 			printf("%d ", num[j]);
 		}
 		
-		printf("The Minimum Result:%d, k = %d\n\n",  calculate(num,count), s[1][count]);
+		printf("k = %d, Minimum Result:%d\n\n",  s[1][count], calculate(num,count));
 		pnum++;
 	}
     return 0;

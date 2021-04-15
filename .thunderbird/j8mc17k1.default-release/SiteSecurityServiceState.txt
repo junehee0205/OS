@@ -1,3 +1,4 @@
-www.mozilla.org:HSTS	0	18700	1631431445695,1,1,2
-www.firefox.com:HSTS	0	18700	1647242647773,1,0,2
-autoconfig.thunderbird.net:HSTS	0	18700	1647242645784,1,0,2
+www.mozilla.org:HSTS	1	18730	1634046105913,1,1,2
+autoconfig.thunderbird.net:HSTS	1	18730	1649857303421,1,0,2
+www.firefox.com:HSTS	1	18730	1649857306558,1,0,2
+firefox.settings.services.mozilla.com:HSTS	0	18730	1649857303649,1,0,2
